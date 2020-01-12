@@ -1,4 +1,4 @@
-# WindowsUWPSystemUpdate
+# WindowsUWPSystemUpdate [Win10 IoT Core]
  Force Windows Updates on RPi 3 Windows IoT UWP
 
  Windows 10 IoT Current OS Version: 10.0.17763.107 failed to download / install updates via Windows Update.
@@ -22,3 +22,7 @@ Package Manifest needs this capability set in XML or Manefest UI Page
         <iot:Capability Name="systemManagement"/>
     </Capabilities>
 ````
+
+Issues: Can throw Exception that has no Message Text associated with it!!
+
+System Event PowerShell: Get-CimInstance Win32_NTLogEvent | Where-Object {$_.Category -eq "1"}

@@ -8,7 +8,14 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <StackPanel Orientation="Vertical">
+        <TextBlock Text="{Binding State}"></TextBlock>
 
-    </Grid>
+        <StackPanel Orientation="Horizontal">
+            <Button Click="UpdateButton_Click" Margin="5">Update</Button>
+            <Button Click="InstallButton_Click" Margin="5">Install</Button>
+            <Button Click="RebootButton_Click" Margin="5">Reboot</Button>            
+        </StackPanel>
+
+    </StackPanel>
 </Page>
